@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeHelp Bootcamp Application</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <style>
+        #myemail {
+            text-decoration: none;
+        }
+
+        #myemail:hover {
+            color: #876d5a;
+            text-decoration: lemonchiffon wavy underline;
+        }
+
+        .nav-link:hover {
+            color: #876d5a;
+            text-decoration: lemonchiffon wavy underline;
+        }
+        #mycontent{
+            color: #876d5a;
+            font-weight: bold;
+        }
+        .container-fluid{
+            border-radius: 50px;
+        }
+
+        :target:before{
+            content: "";
+            display: block;
+            height: 100px;
+        }
+        #mylink{
+            color: #876d5a;
+            background-color: antiquewhite;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        #mylink:hover{
+            text-decoration: #CDA581 wavy underline;
+        }
+        p{
+            font-size: 18px;
+        }
+        h4{
+            font-weight: bold;
+        }
+
+    </style>
+
+
+    <header class="p-5">
+        <nav class="navbar navbar-light navbar-expand-lg p-3" style="background-color: #DABEA7; position: fixed; top: 0px; right: 0px; left: 0px;">
+            <div class="container">
+                <a href="/intro.html"><img src="https://cdn-icons-png.flaticon.com/128/967/967561.png" alt="" style="height: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <b class="mx-5" style="color:#876d5a; font-size: 18px;">WeHelp Bootcamp Application</b>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-2">
+                            <a href="https://www.cakeresume.com/s--Cg-Lat950ofGCk_Cf-wR-A--/charlie9684" 
+                            class="nav-link" style="font-weight: bold;">Resume</a>
+                        </li>
+
+                        <li class="nav-item mx-2">
+                            <a href="https://reurl.cc/V1E1mn" class="nav-link" style="font-weight: bold;">Projects</a>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown mx-2" style="font-weight: bold;">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                NEWS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#"
+                                        style="font-weight: bold; font-size: 14px;">AAA</a></li>
+                                <li><a class="dropdown-item" href="#"
+                                        style="font-weight: bold; font-size: 14px;">AAA</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="nav-item mx-2">
+                            <a href="mailto:charlie9684@gmail.com" class="nav-link" style="font-weight: bold;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="main-wrap p-5">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-1 col-md-0 col-sm-0"></div>
+                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-5">
+                    <ul class="navbar-nav" style="position:fixed;">
+                        <h1 style="font-weight: bolder; color: #CDA581;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Category</h1>
+                        <br>
+                        <li class="nav-item">
+                            <a id="mycontent" class="nav-link" href="#section1">Q1. Brief Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="mycontent" class="nav-link" href="#section2">Q2. Side Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="mycontent" class="nav-link" href="#section3">Q3. Training Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="mycontent" class="nav-link" href="#section4">Q4. Dream Job</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="mycontent" class="nav-link" href="#section5">Q5. Tough Situation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="mycontent" class="nav-link" href="#section6">Q6. Technical Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="mycontent" class="nav-link" href="#section7">Q7. Say Something</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-7">
+                    <div id="section1" class="container-fluid text-white" style="padding:50px 50px; background-color: #876d5a;">
+                        <h1>Q1. Brief Introduction</h1>
+                        <h4>兩百字內的個人簡介</h4><br>
+                        <p>&emsp;&emsp;我是李郁玹。生於1996，來自屏東。
+                        畢業於文藻外語大學傳播藝術系，日常興趣喜歡登山露營、底片攝影。
+                            2018年畢業後原先從事一般門市相關工作，偶然機會下發現對於網頁設計、程式語言擁有很高的興趣及熱忱，
+                            隨後投入工程師養成班的訓練課程，目前一邊累積作品正積極轉職軟體工程師。</p>
+                    </div>
+
+                    <div id="section2" class="container-fluid" style="padding:50px 50px; color: #704214;">
+                        <h1>Q2. Side Project</h1>
+                        <h4>為了成為軟體工程師，曾做過什麼努力？或是具體的專案作品。</h4><br>
+                        <ul style="font-size: 18px;">
+                            <li>2021年間利用下班後的空閒時間跟著彭彭老師的Python影片自學。</li>
+                            <li>期間也透過YouTube上的前輩分享，進而了解軟體工程師的相關知識。</li>
+                            <li> 2022年03-07月，辭職後投入政府補助的iSpan資展國際—跨域Java軟體工程師訓練，576小時。</li>
+                        </ul>
+                          <a href="https://reurl.cc/V1E1mn" id="mylink">小組專題作品請點我！</a><br>
+                          <p>（我主要是負責網頁前端程式的撰寫及頁面的設計美化，使用Figma實作Wirframe設計使用者介面，
+                            並運用HTML、CSS、JavaScript，並搭配Bootstrap框架搭建出前端商城畫面。）
+                            <br><br>
+                            註：原本這段想說的話太多了，把心路歷程放到最後Q7想說的話裡面，如果願意可以最後看看，這邊先留下簡化後的版本，謝謝您。
+                            </p>
+                    </div>
+
+                    <div id="section3" class="container-fluid text-white" style="padding:50px 50px; background-color: #A98B73;">
+                        <h1>Q3. Training Schedule</h1>
+                        <h4>如果參與這個計畫，會怎麼安排學習時間？</h4><br>
+                        <p>&emsp;&emsp;目前的規劃是每日投入8-10小時，一週約50-60小時的時間。
+                            主要集中在平日白天，讓大腦習慣在一般上班時間有效率的完成工作。
+                            也因為目前是待業階段，可以全心投入培訓計畫中。
+                            </p>
+                    </div>
+
+                    <div id="section4" class="container-fluid" style="padding:50px 50px; color: #704214;">
+                        <h1>Q4. Dream Job</h1>
+                        <h4>是否有想要加入的軟體公司？為什麼想加入該公司？</h4><br>
+                        <p>&emsp;&emsp;想要加入犀牛盾科技股份有限公司，主要自己一直都是產品使用者，歷年來看到這間公司的成長也慢慢延伸出國際線，
+                            希望自己有機會可以加入這個企業，除了自我成長也讓使用者有更好的整合體驗。</p>
+                    </div>
+
+                    <div id="section5" class="container-fluid text-white" style="padding:50px 50px; background-color: #876d5a;">
+                        <h1>Q5. Tough Situation</h1>
+                        <h4>曾經碰到最困難的事情，如何克服？</h4><br>
+                        <p>&emsp;&emsp;這個問題我思考很久，若以目前人生中碰到最困難的事情，我想應該是職涯的規劃。
+                            在2018年大學畢業後就加入了前公司，職稱為門市正職人員，從服務、業績控管到活動企劃都需要包辦，
+                            當疫情開始嚴峻時也面臨到縮減工時等等措施，同時在長期的服務性質工作下，讓我變得有點否定自己，也不想以這份職業一直到老。<br>
+                            <br>
+                            &emsp;&emsp;在思考自己是否有其他出路時，我嘗試去面試電商小編、行銷人員、行政人員等等，
+                            但因為種種的因素考量下沒有順利轉職（也包括大部分都沒有被錄取）
+                            輾轉因為大學同學的推薦接觸到程式語言，像是開啟我一條嶄新的道路，在學習過程中也慢慢的重拾成就感。
+                            如果要說如何克服，我想答案是不放棄的繼續嘗試。而我現在也尚未克服，還在這條轉職路上繼續努力！
+                            </p>
+                    </div>
+
+                    <div id="section6" class="container-fluid" style="padding:50px 50px; color: #704214;">
+                        <h1>Q6. Technical Experience</h1>
+                        <h4>關於這份申請網頁，分享一個開發時的技術心得。</h4><br>
+                        <p>&emsp;&emsp;在製作這份申請網頁時構想過許多呈現方式，最後還是以自己較熟悉的Bootstrap類似下去做延伸。
+                            想分享的是在中間區塊，嘗試了點按選單即跳轉到對應的問題段落，
+                            以及右下角的回到頁首（其實構想的概念是重新載入此頁）<br><br>
+
+                            &emsp;&emsp;在撰寫的過程中有遇到一個問題是導覽列因為固定在上方，
+                            導致點按選單後跳轉的錨點段落在觀看上會有落差（會偏上、被導覽列遮住），
+                            後來嘗試用找到的CSS解法，在點按後於段落上方加入空白增欄，讓整體頁面呈現看起來比較平衡。
+                            </p>
+                    </div>
+
+                    <div id="section7" class="container-fluid text-white" style="padding:50px 50px; background-color: #A98B73;">
+                        <h1>Q7. Say Something</h1>
+                        <h4>其他想要說的事情</h4><br>
+                        <p>&emsp;&emsp;一開始會接觸到程式語言是因為大學同學和我分享彭彭老師Youtube上的Python課程，讓我對這方面產生好奇心，
+                            也經由課程影片的引導下使用Python寫出計算BMI的公式，過程中對程式碼所帶來的便利性感到驚訝，獲得小小的成就感。
+                            後續也有實際應用在上一份工作的統整客訂資料上，
+                            每位顧客所訂購的產品內容與聯絡資料都不相同，在模板上一一更改相當耗時，
+                            於是我藉由學習到的概念寫出客訂程式碼，讓其他同仁只需要輸入基本資訊就能帶出完整個簡訊內容，
+                            大幅減少所耗費的時間。 
+                            <br><br>
+                            &emsp;&emsp;2021年間面對疫情期間公司進行縮減工時、
+                            調整營業時間等等措施，讓我不經思考所在行業的未來展望以及是否有其他出路，
+                            漸漸萌生轉職的念頭。在查找資料時發現政府有補助產業新尖兵的企劃（並且當時不確定會不會續辦），
+                            當時想著有免費的課程還有月領獎助金，於是在手上專案告一段落後，
+                            我並辭職報名了iSpan資展國際的跨域Java軟體工程師就業養成班。
+                            <br><br>
+                            &emsp;&emsp;一路從Python先修班、到用Java寫出instagram照片下載器的小專案、學習有關MySQL資料庫的語法操作，
+                            後來發現自己其實對前端設計抱有更豐富的熱忱，
+                            在最後的分組專題中也自告奮勇負責網站前端頁面的設計及程式碼撰寫。
+                            雖然最後完成了培訓班課程，但深深的感覺自己比較像是被時間推進，不夠扎實，
+                            無法獨力完成API串聯、不了解時下頻繁使用的Angular/Vue/React框架，
+                            對於後端那時候學習的Spring、Hibernate一知半解。
+                            要成為一位即戰力的前端工程師還有太多不足的地方，在結束課程後投遞履歷大部分也是被已讀。
+                            <br><br>
+                            &emsp;&emsp;上週意外看到彭彭老師在臉書社團推廣這次第三屆的WeHelp軟體工程師扶持計畫，
+                            馬上著手去補看了說明會和歷屆學長姐的分享，除了有提到完整前後端訓練以及使用到的技術外，
+                            我想最吸引我也是最想挑戰的是彭彭老師在說明會裡說的<b>「這個課程並不是手把手教學，而是把你當作一位工程師，
+                                引導你去完成每個階段的任務。」</b>如果有機會可以加入這屆扶持計畫，我會盡我的全力去完成每個專案！
+                            </p>
+
+                    </div>
+                    <br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="col-lg-1 col-sm-0">
+                    <a href="/intro.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2697/2697212.png"
+                        alt="" style="width: 50px; position: fixed; bottom: 100px; right: 50px;">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="p-4 border-top" style="background-color:#DABEA7;">
+        <div class="container align-items-center justify-content-between d-flex">
+            <p class="mb-0 text-dark">
+               Have a nice day!
+            </p>
+
+            <p class="mb-0 text-dark">
+                Contact me via
+                <a href="mailto:charlie9684@gmail.com" class="text-dark" id="myemail">charlie9684@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
