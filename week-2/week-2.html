@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 要求一：函式與流程控制
+        // 完成以下函式，在函式中使用迴圈計算最小值到最大值之間，固定間隔的整數總和。其中你可
+        // 以假設 max 一定大於 min 且為整數，step 為正整數。
+
+        function calculate(min, max, step) {
+            var sum = 0;
+            for (i = min; i <= max; i+=step) {                
+                //console.log(i);
+                sum += i;
+            }
+            console.log(sum);
+        }
+        calculate(1, 3, 1); // 你的程式要能夠計算 1+2+3，最後印出 6
+        calculate(4, 8, 2); // 你的程式要能夠計算 4+6+8，最後印出 18
+        calculate(-1, 2, 2); // 你的程式要能夠計算 -1+1，最後印出 0
+
+
+        // 要求二：Python 字典與列表、JavaScript 物件與陣列
+        // 完成以下函式，正確計算出非 manager 的員工平均薪資，所謂非 manager 就是在資料中
+        // manager 欄位標註為 False (Python) 或 false (JavaScript) 的員工，程式需考慮員工資料數量
+        // 不定的情況。
+
+        function avg(data) {
+            var sum = 0;
+            for (var i = 0; i < data.employees.length; i++) {
+                if (data.employees[i].manager != true) {
+                    var a = sum += data.employees[i].salary
+                    var b = data.employees.length-1
+                    var avgsalary = a / b
+                } else {
+                }
+            }
+            console.log(avgsalary);
+        }
+        avg({
+            "employees": [
+                {
+                    "name": "John",
+                    "salary": 30000,
+                    "manager": false
+                },
+                {
+                    "name": "Bob",
+                    "salary": 60000,
+                    "manager": true
+                },
+                {
+                    "name": "Jenny",
+                    "salary": 50000,
+                    "manager": false
+                },
+                {
+                    "name": "Tony",
+                    "salary": 40000,
+                    "manager": false
+                }
+            ]
+        }); // 呼叫 avg 函式
+
+
+        // 要求三：
+        // 完成以下函式，最後能印出程式中註解所描述的結果。
+
+        function func(a) {
+            return function(b,c){
+                console.log(a+(b*c));
+            }
+        }
+        func(2)(3, 4); // 你補完的函式能印出 2+(3*4) 的結果 14
+        func(5)(1, -5); // 你補完的函式能印出 5+(1*-5) 的結果 0
+        func(-3)(2, 9); // 你補完的函式能印出 -3+(2*9) 的結果 15
+        // 一般形式為 func(a)(b, c) 要印出 a+(b*c) 的結果
+
+
+        // 要求四：
+        // 找出至少包含兩筆整數的列表 (Python) 或陣列 (JavaScript) 中，兩兩數字相乘後的最大值。
+        // 提醒：請勿更動題目中任何已經寫好的程式，不可以使用排序相關的內建函式。
+
+        function maxProduct(nums) {
+            var b = nums.length;
+            // console.log(nums.length);
+
+            if (b == 4) {
+                var a1 = nums[b - 4] * nums[b - 3];
+                var a2 = nums[b - 4] * nums[b - 2];
+                var a3 = nums[b - 4] * nums[b - 1];
+                var a4 = nums[b - 3] * nums[b - 2];
+                var a5 = nums[b - 3] * nums[b - 1];
+                var a6 = nums[b - 2] * nums[b - 1];
+                var arr = [a1, a2, a3, a4, a5, a6];
+
+                //console.log(arr);
+                console.log(Math.max.apply(null, arr));
+                // console.log(a1)
+
+            } else if (b == 3) {
+                var a13 = nums[b - 3] * nums[b - 2];
+                var a14 = nums[b - 3] * nums[b - 1];
+                var a15 = nums[b - 2] * nums[b - 1];
+                var arr2 = [a13, a14, a15];
+                // console.log(arr);
+                console.log(Math.max.apply(null, arr2));
+            } else {
+                var a16 = nums[b - 2] * nums[b - 1];
+                var arr3 = [a16];
+                // console.log(arr);
+                console.log(Math.max.apply(null, arr3));
+            }
+
+        }
+        maxProduct([5, 20, 2, 6]) // 得到 120
+        maxProduct([10, -20, 0, 3]) // 得到 30
+        maxProduct([10, -20, 0, -3]) // 得到 60
+        maxProduct([-1, 2]) // 得到 -2
+        maxProduct([-1, 0, 2]) // 得到 0 或 -0
+        maxProduct([5, -1, -2, 0]) // 得到 2
+        maxProduct([-5, -2]) // 得到 10
+
+
+        // 要求五：
+        // Given an array of integers, show indices of the two numbers such that they add up to a
+        // specific target. You can assume that each input would have exactly one solution, and you
+        // can not use the same element twice.
+
+        function twoSum(nums, target) {
+            for (let i = 0; i < nums.length - 1; i++) {
+                for (let j = i + 1; i < nums.length; j++) {
+                    if (nums[i] + nums[j] === target) {
+                        // 相加等於 target 就直接輸出該兩值的 index
+                        return [i, j];
+                    }
+                }
+            }
+
+        }
+        let result = twoSum([2, 11, 7, 15], 9);
+        console.log(result); // show [0, 2] because nums[0]+nums[2] is 9
+
+
+        // 要求六 ( Optional )：
+        // 給定只會包含 0 或 1 兩種數字的列表 (Python) 或陣列 (JavaScript)，計算連續出現 0 的最大
+        // 長度。
+
+        function maxZeros(nums) {
+            var a = 0;
+            var max = 0;
+            for (var i = 0; i < nums.length; i++) {
+                if (nums[i] == 0) {
+                    a++;
+                } else {
+                    if (a > max) {
+                        max = a;
+                    }
+                    a = 0;
+                }
+            }
+            if (a > max) max = a;
+            console.log(max);
+
+        }
+        maxZeros([0, 1, 0, 0]); // 得到 2
+        maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0]); // 得到 4
+        maxZeros([1, 1, 1, 1, 1]); // 得到 0
+        maxZeros([0, 0, 0, 1, 1]) // 得到 3
+
+    </script>
+</body>
+
+</html>
