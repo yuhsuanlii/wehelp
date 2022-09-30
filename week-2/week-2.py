@@ -7,7 +7,6 @@ def calculate(min, max, step):
     i=0    
     for i in range(min,max+1,step):   
         sum+=i
-    # print(i, end=" ")
     print(sum)
 calculate(1, 3, 1) # 你的程式要能夠計算 1+2+3，最後印出 6
 calculate(4, 8, 2) # 你的程式要能夠計算 4+6+8，最後印出 18
