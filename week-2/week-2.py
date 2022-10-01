@@ -74,13 +74,12 @@ func(-3)(2, 9) # 你補完的函式能印出 -3+(2*9) 的結果 15
 # 提醒：請勿更動題目中任何已經寫好的程式，不可以使用排序相關的內建函式。
 
 def maxProduct(nums):
-    a = nums[0]; b = nums[1]
-
+    a = nums[0]
+    b = nums[1]
     for i in range(0, len(nums)):           
         for j in range(i + 1, len(nums)):
             if (nums[i] * nums[j] > a * b):
                 a = nums[i]; b = nums[j]
-
     print(a*b)
 
 maxProduct([5, 20, 2, 6]) # 得到 120
