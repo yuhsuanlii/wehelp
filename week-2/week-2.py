@@ -79,7 +79,8 @@ def maxProduct(nums):
     for i in range(0, len(nums)):           
         for j in range(i + 1, len(nums)):
             if (nums[i] * nums[j] > a * b):
-                a = nums[i]; b = nums[j]
+                a = nums[i]
+                b = nums[j]
     print(a*b)
 
 maxProduct([5, 20, 2, 6]) # 得到 120
