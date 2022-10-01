@@ -90,35 +90,15 @@
         // 提醒：請勿更動題目中任何已經寫好的程式，不可以使用排序相關的內建函式。
 
         function maxProduct(nums) {
-            var b = nums.length;
-            // console.log(nums.length);
+      
+            var a = nums[0], b = nums[1]; // 初始化
 
-            if (b == 4) {
-                var a1 = nums[b - 4] * nums[b - 3];
-                var a2 = nums[b - 4] * nums[b - 2];
-                var a3 = nums[b - 4] * nums[b - 1];
-                var a4 = nums[b - 3] * nums[b - 2];
-                var a5 = nums[b - 3] * nums[b - 1];
-                var a6 = nums[b - 2] * nums[b - 1];
-                var arr = [a1, a2, a3, a4, a5, a6];
+            for (var i = 0; i < nums.length; i++)
+                for (var j = i + 1; j < nums.length; j++)
+                    if (nums[i] * nums[j] > a * b)
+                        a = nums[i], b = nums[j];
 
-                //console.log(arr);
-                console.log(Math.max.apply(null, arr));
-                // console.log(a1)
-
-            } else if (b == 3) {
-                var a13 = nums[b - 3] * nums[b - 2];
-                var a14 = nums[b - 3] * nums[b - 1];
-                var a15 = nums[b - 2] * nums[b - 1];
-                var arr2 = [a13, a14, a15];
-                // console.log(arr);
-                console.log(Math.max.apply(null, arr2));
-            } else {
-                var a16 = nums[b - 2] * nums[b - 1];
-                var arr3 = [a16];
-                // console.log(arr);
-                console.log(Math.max.apply(null, arr3));
-            }
+            console.log(a*b)
 
         }
         maxProduct([5, 20, 2, 6]) // 得到 120
