@@ -89,17 +89,15 @@
         // 找出至少包含兩筆整數的列表 (Python) 或陣列 (JavaScript) 中，兩兩數字相乘後的最大值。
         // 提醒：請勿更動題目中任何已經寫好的程式，不可以使用排序相關的內建函式。
 
-        function maxProduct(nums) {
-      
+        function maxProduct(nums) {     
             var a = nums[0];
             var b = nums[1];
             for (var i = 0; i < nums.length; i++)
                 for (var j = i + 1; j < nums.length; j++)
                     if (nums[i] * nums[j] > a * b)
-                        a = nums[i], b = nums[j];
-
+                        a = nums[i];
+                        b = nums[j];
             console.log(a*b)
-
         }
         maxProduct([5, 20, 2, 6]) // 得到 120
         maxProduct([10, -20, 0, 3]) // 得到 30
