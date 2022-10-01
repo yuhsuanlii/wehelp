@@ -74,27 +74,14 @@ func(-3)(2, 9) # 你補完的函式能印出 -3+(2*9) 的結果 15
 # 提醒：請勿更動題目中任何已經寫好的程式，不可以使用排序相關的內建函式。
 
 def maxProduct(nums):
-    b=len(nums)
-    
-    if b == 4 :
-        a1 = nums[b - 4] * nums[b - 3]
-        a2 = nums[b - 4] * nums[b - 2]
-        a3 = nums[b - 4] * nums[b - 1]
-        a4 = nums[b - 3] * nums[b - 2]
-        a5 = nums[b - 3] * nums[b - 1]
-        a6 = nums[b - 2] * nums[b - 1]
-        arr = [a1, a2, a3, a4, a5, a6]
-        print(max(arr))
-    elif b == 3 :
-        a13 = nums[b - 3] * nums[b - 2]
-        a14 = nums[b - 3] * nums[b - 1]
-        a15 = nums[b - 2] * nums[b - 1]
-        arr2 = [a13, a14, a15]
-        print(max(arr2))
-    else:
-        a16 = nums[b - 2] * nums[b - 1]
-        arr3 = [a16]
-        print(max(arr3))
+    a = nums[0]; b = nums[1]
+
+    for i in range(0, len(nums)):           
+        for j in range(i + 1, len(nums)):
+            if (nums[i] * nums[j] > a * b):
+                a = nums[i]; b = nums[j]
+
+    print(a*b)
 
 maxProduct([5, 20, 2, 6]) # 得到 120
 maxProduct([10, -20, 0, 3]) # 得到 30
