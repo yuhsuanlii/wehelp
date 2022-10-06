@@ -290,8 +290,7 @@
             }).then(function (data) {
                 let myresult = data.result.results;
                 for (var i = 0; i < myresult.length; i++) {
-
-                    for (i = 0; i <= 10; i++) {
+                    for (i = 0; i < 10; i++) {
                         // title
                         var mytitle = myresult[i].stitle;
                         var newp = document.createElement('p');
