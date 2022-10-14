@@ -7,17 +7,19 @@ def index():
     session.clear()
     return render_template('index.html')
 
-@app.route("/signin", methods=['POST'])   # type: ignore
+@app.route("/signin", methods=['POST'])
 def signin():
     username = request.form.get('username')
     password = request.form.get('password')
-    session['username'] = request.form['username'] #
+    session['username'] = request.form['username'] 
 
     if request.method == 'POST':            
             if username == "" and password == "":
-                 return redirect(url_for('error', message='請輸入帳號、密碼'))
+                session.pop('username', None)
+                return redirect(url_for('error', message='請輸入帳號、密碼'))
             if username != 'test' or password != 'test':
-                 return redirect(url_for('error', message='帳號、或密碼輸入錯誤'))            
+                session.pop('username', None)
+                return redirect(url_for('error', message='帳號、或密碼輸入錯誤'))            
             return redirect(url_for("member"))
             # return render_template("member.html")                        
     else: 
@@ -53,6 +55,7 @@ def signagain():
 def error():
     session.clear()
     return render_template('error.html')
+
 
 if __name__=="__main__": # 如果以主程式執行
     app.run(port=3000) # 立刻啟動伺服器
