@@ -3,7 +3,8 @@
 要求三  
 --------------
 
-```INSERT INTO member (name,username,password,follower_count) VALUES ('test','test', 'test','50');  
+```
+INSERT INTO member (name,username,password,follower_count) VALUES ('test','test', 'test','50');  
 INSERT INTO member (name,username,password,follower_count) VALUES ('Kevin','kevin001', '001','100');  
 INSERT INTO member (name,username,password,follower_count) VALUES ('Mary','mary002', '002','200');  
 INSERT INTO member (name,username,password,follower_count) VALUES ('David','david003', '003','300');  
@@ -24,7 +25,8 @@ UPDATE member SET username = "test2" WHERE id = 1;
 要求四  
 --------------
 
-```SELECT COUNT(id) FROM member;  
+```
+SELECT COUNT(id) FROM member;  
 SELECT SUM(follower_count) FROM member;  
 SELECT AVG(follower_count) FROM member;
 ```
@@ -35,7 +37,8 @@ SELECT AVG(follower_count) FROM member;
 要求五  
 --------------
 
-```INSERT INTO message (member_id,content, like_count) VALUES (1,'test','0');  
+```
+INSERT INTO message (member_id,content, like_count) VALUES (1,'test','0');  
 INSERT INTO message (member_id,content, like_count) VALUES (1,'hello test','10');  
 INSERT INTO message (member_id,content, like_count) VALUES (1,"hello i'm test",'25');  
 INSERT INTO message (member_id,content, like_count) VALUES (2,"I'm Kevin",'2');  
