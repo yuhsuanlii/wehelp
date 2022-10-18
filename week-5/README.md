@@ -14,7 +14,7 @@ select * from member order by time desc;
 select * from member order by time desc LIMIT 1,3;  
 select * from member where username = "test";  
 select * from member where username = "test" and password = "test";  
-UPDATE member SET username = "test2" WHERE id = 1;  
+UPDATE member SET username = "test2" WHERE id = 1;
 ```
 
 <img src="https://user-images.githubusercontent.com/101781321/196498650-4f03d03f-7420-4ef5-8521-c3f85d4c51c5.JPG" alt="" width="600">
@@ -26,7 +26,7 @@ UPDATE member SET username = "test2" WHERE id = 1;
 
 ```SELECT COUNT(id) FROM member;  
 SELECT SUM(follower_count) FROM member;  
-SELECT AVG(follower_count) FROM member;  
+SELECT AVG(follower_count) FROM member;
 ```
 
 <img src="https://user-images.githubusercontent.com/101781321/196498823-bc680203-ce19-4dff-a199-5b44e9f1103c.JPG" alt="" width="300">
@@ -45,7 +45,7 @@ INSERT INTO message (member_id,content, like_count) VALUES (5,"I'm Tony",'5');
 
 SELECT name, username, content FROM message INNER JOIN member ON member.id=message.member_id;  
 SELECT name, username, content FROM message INNER JOIN member ON ( member.id=message.member_id ) WHERE member.username like "%test%";  
-SELECT AVG(message.like_count) AS avg_like FROM message INNER JOIN member ON ( member.id=message.member_id ) WHERE member.username like "%test%";  
+SELECT AVG(message.like_count) AS avg_like FROM message INNER JOIN member ON ( member.id=message.member_id ) WHERE member.username like "%test%";
 ```
 
 <img src="https://user-images.githubusercontent.com/101781321/196499098-1082dcd5-d0d5-4a5b-b759-03601df76389.JPG" alt="" width="600">
