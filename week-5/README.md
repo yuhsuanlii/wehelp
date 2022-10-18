@@ -2,6 +2,7 @@
 
 要求三  
 --------------
+
 ```INSERT INTO member (name,username,password,follower_count) VALUES ('test','test', 'test','50');  
 INSERT INTO member (name,username,password,follower_count) VALUES ('Kevin','kevin001', '001','100');  
 INSERT INTO member (name,username,password,follower_count) VALUES ('Mary','mary002', '002','200');  
@@ -15,21 +16,25 @@ select * from member where username = "test";
 select * from member where username = "test" and password = "test";  
 UPDATE member SET username = "test2" WHERE id = 1;  
 ```
+
 <img src="https://user-images.githubusercontent.com/101781321/196498650-4f03d03f-7420-4ef5-8521-c3f85d4c51c5.JPG" alt="" width="600">
 <img src="https://user-images.githubusercontent.com/101781321/196498663-f467f42e-aeb8-47ea-a6af-3c949f515eb1.JPG" alt="" width="600">
 
 
 要求四  
 --------------
+
 ```SELECT COUNT(id) FROM member;  
 SELECT SUM(follower_count) FROM member;  
 SELECT AVG(follower_count) FROM member;  
 ```
+
 <img src="https://user-images.githubusercontent.com/101781321/196498823-bc680203-ce19-4dff-a199-5b44e9f1103c.JPG" alt="" width="300">
 
 
 要求五  
 --------------
+
 ```INSERT INTO message (member_id,content, like_count) VALUES (1,'test','0');  
 INSERT INTO message (member_id,content, like_count) VALUES (1,'hello test','10');  
 INSERT INTO message (member_id,content, like_count) VALUES (1,"hello i'm test",'25');  
