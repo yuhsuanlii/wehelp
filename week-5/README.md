@@ -27,7 +27,7 @@ UPDATE member SET name = "test2" WHERE id = 1;
 要求四  
 --------------
 
-``
+```
 SELECT COUNT(id) FROM member;  
 SELECT SUM(follower_count) FROM member;  
 SELECT AVG(follower_count) FROM member;
