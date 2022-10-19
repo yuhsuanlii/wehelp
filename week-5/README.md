@@ -20,7 +20,7 @@ UPDATE member SET name = "test2" WHERE id = 1;
 
 <img src="https://user-images.githubusercontent.com/101781321/196498650-4f03d03f-7420-4ef5-8521-c3f85d4c51c5.JPG" alt="" width="600">
 <img src="https://user-images.githubusercontent.com/101781321/196604917-b950afec-c842-4ce3-be7e-28b783d9806b.JPG" alt="" width="600">
-<img src="https://user-images.githubusercontent.com/101781321/196604988-890e1138-9849-40cf-b28e-a528198ecec2.JPG" alt="" width="500">
+<img src="https://user-images.githubusercontent.com/101781321/196604988-890e1138-9849-40cf-b28e-a528198ecec2.JPG" alt="" width="400">
 
 
 
