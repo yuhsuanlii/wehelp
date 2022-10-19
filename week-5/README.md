@@ -15,17 +15,19 @@ select * from member order by time desc;
 select * from member order by time desc LIMIT 1,3;  
 select * from member where username = "test";  
 select * from member where username = "test" and password = "test";  
-UPDATE member SET username = "test2" WHERE id = 1;
+UPDATE member SET name = "test2" WHERE id = 1;
 ```
 
 <img src="https://user-images.githubusercontent.com/101781321/196498650-4f03d03f-7420-4ef5-8521-c3f85d4c51c5.JPG" alt="" width="600">
-<img src="https://user-images.githubusercontent.com/101781321/196498663-f467f42e-aeb8-47ea-a6af-3c949f515eb1.JPG" alt="" width="600">
+<img src="https://user-images.githubusercontent.com/101781321/196604917-b950afec-c842-4ce3-be7e-28b783d9806b.JPG" alt="" width="600">
+<img src="https://user-images.githubusercontent.com/101781321/196604988-890e1138-9849-40cf-b28e-a528198ecec2.JPG" alt="" width="500">
+
 
 
 要求四  
 --------------
 
-```
+``
 SELECT COUNT(id) FROM member;  
 SELECT SUM(follower_count) FROM member;  
 SELECT AVG(follower_count) FROM member;
@@ -47,9 +49,10 @@ INSERT INTO message (member_id,content, like_count) VALUES (4,"I'm David",'4');
 INSERT INTO message (member_id,content, like_count) VALUES (5,"I'm Tony",'5');  
 
 SELECT name, username, content FROM message INNER JOIN member ON member.id=message.member_id;  
-SELECT name, username, content FROM message INNER JOIN member ON ( member.id=message.member_id ) WHERE member.username like "%test%";  
-SELECT AVG(message.like_count) AS avg_like FROM message INNER JOIN member ON ( member.id=message.member_id ) WHERE member.username like "%test%";
+SELECT name, username, content FROM message INNER JOIN member ON ( member.id=message.member_id ) WHERE member.username="test";
+SELECT AVG(message.like_count) AS avg_like FROM message INNER JOIN member ON ( member.id=message.member_id ) WHERE member.username="test";
 ```
 
 <img src="https://user-images.githubusercontent.com/101781321/196499098-1082dcd5-d0d5-4a5b-b759-03601df76389.JPG" alt="" width="600">
-<img src="https://user-images.githubusercontent.com/101781321/196499127-346a7831-0dd4-4e7a-aee5-911023354804.JPG" alt="" width="600">
+<img src="https://user-images.githubusercontent.com/101781321/196605085-9b71aa77-3dc8-4e0c-b2da-d8bb3efbc8bb.JPG" alt="" width="600">
+
