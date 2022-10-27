@@ -106,8 +106,8 @@ def message():
             cur.execute(sql,params)
             data = cur.fetchone() 
             myid = data[0]
-            sql_insert = "INSERT INTO message(member_id,content)VALUES('%s', '"+ content + "')" 
-            params_insert = (myid)
+            sql_insert = "INSERT INTO message(member_id,content)VALUES('%s', %s)" 
+            params_insert = (myid, content)
             cur.execute(sql_insert, params_insert)
             conn.commit()
         return redirect(url_for("member")) 
