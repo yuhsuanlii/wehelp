@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Week-6</title>
+
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .wordsize {
+            font-size: 20px;
+        }
+        
+        input {
+            font-size: 16px;
+            width: 150px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: #194052; height: 100px;">
+        <div style="text-align: center;">
+            <b style="color: white; font-size: 30px; line-height: 100px;">
+                歡迎光臨，這是會員頁</b>
+        </div>
+    </header>
+    <section style="text-align: center; line-height: 40px;">
+        <h1>{{name}} 歡迎登入系統</h1>
+        <form method="get" action="/signout">
+            <button type="submit">登出系統</button>
+        </form>
+        <hr>
+        <h1>快來留言吧</h1>
+        <form method="post" action="/message">
+            <label for="content">內容&ensp;</label>
+            <input type="text" id="content" name="content"><br>
+            <button type="submit">送出</button>
+        </form>
+        <hr>
+        {% for i in data %}
+        {{ i[0]+": "+i[1] }} <br>
+        {% endfor %}
+    </section>
+</body>
+
+</html>
