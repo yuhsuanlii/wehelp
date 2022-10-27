@@ -74,7 +74,7 @@ def signin():
 
 
 @app.route("/member") 
-def member():
+def member():   
     if "username" in session:
         print(f'Signed in as {session["username"]}')
         username = session["username"]
@@ -83,18 +83,38 @@ def member():
         cur.execute(sql, params)
         data = cur.fetchone()
         myname = data[0]
-        # print(myname)
-        return render_template("member.html",name=myname)
+
+        # 顯示message所有聊天內容
+        sql = "SELECT name, content FROM message INNER JOIN member ON member.id=message.member_id ORDER BY message.time DESC"
+        cur.execute(sql)
+        data = cur.fetchall() 
+        return render_template("member.html",name=myname,data=data)
     else:
         return render_template("index.html")
-    
+
+
+
+@app.route("/message", methods=['POST'])
+def message():
+    # 每按一次"送出"存進一筆資料
+    # 根據登入時在Session 紀錄的使⽤者編號，將留⾔內容紀錄到 message 資料表。
+    content = request.form.get('content')
+    if request.method == 'POST':
+        if "username" in session:
+            sql = "SELECT id, name,username FROM member WHERE username = %s"
+            params = session['username']
+            cur.execute(sql,params)
+            data = cur.fetchone() 
+            myid = data[0]
+            sql_insert = "INSERT INTO message(member_id,content)VALUES('%s', '"+ content + "')" 
+            params_insert = (myid)
+            cur.execute(sql_insert, params_insert)
+            conn.commit()
+        return redirect(url_for("member")) 
 
 @app.route("/signout", methods=['GET'])
 def signout():
     print(f'Signed out as {session["username"]}')
-
-    # remove the username from the session if it's there
-    # session.pop('username', None) # 刪除某一個key
     session.clear() # 刪除所有
     return render_template("index.html")
 
