@@ -147,14 +147,14 @@ def rename():
     
     if req['name'] != "":      
         sql = 'UPDATE member SET name=%s WHERE username=%s'   
-        params = (req['name'], request.values['username'])
+        params = (req['name'], session['username'])
         cur.execute(sql, params)
         conn.commit() 
         res = make_response(jsonify(req),200) # 200 OK
     else:
         res = make_response(jsonify(req),202) # 202 Accepted
     print(res) # <Response 22 bytes [200 OK]>
-    return res   
+    return res      
 
 
 @app.route("/signout", methods=['GET'])
