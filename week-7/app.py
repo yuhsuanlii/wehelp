@@ -4,7 +4,7 @@ import pymysql
 
 app = Flask(__name__) # __name__代表目前執行的模組
 app.config['SECRET_KEY'] = b'\x8f\xef\xa5\xba#8.9\xa5A]\xdd\xc4\x1b\x8d\x0c'
-conn = pymysql.connect(host='localhost',user='root',password='root',db='testdb',charset='utf8')
+conn = pymysql.connect(host='localhost',user='root',password='',db='website',charset='utf8')
 cur = conn.cursor()
 
 @app.route("/") # 函式的裝飾(Decorater):以函式為基礎，提供附加的功能
