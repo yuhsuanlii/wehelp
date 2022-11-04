@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Week-7</title>
+
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .wordsize {
+            font-size: 20px;
+        }
+        button {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: #194052; height: 100px;">
+        <div style="text-align: center;">
+            <b style="color: white; font-size: 30px; line-height: 100px;">
+                失敗頁面</b>
+        </div>
+    </header>
+    <section style="text-align: center; line-height: 40px;">
+        <h1 id="result"></h1>
+        <form method="get" action="/signagain">
+            <button type="submit">重新登入</button>
+        </form>
+    </section>
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let result = decodeURI(urlParams.toString().substring(8))
+        console.log(result);
+        document.getElementById('result').textContent = result;
+    </script>
+</body>
+
+</html>
